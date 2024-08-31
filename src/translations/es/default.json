@@ -1,0 +1,10 @@
+{
+  "LOGIN_TEXT": "Iniciar sesión",
+  "WELCOME_TEXT": "Bienvenido a ProductHub",
+  "PASSWORD_REQUIRED": "La contraseña es requerida",
+  "USERNAME_REQUIRED": "El nombre de usuario es requerido",
+  "USERNAME_OR_PASSWORD_INCORRECT": "El nombre de usuario o la contraseña son incorrectos",
+  "USERNAME_LABEL": "Nombre de usuario",
+  "PASSWORD_LABEL": "Contraseña",
+  "MODAL_CRENDETIALS_INVALID_TITLE": "Credenciales inválidas"
+}

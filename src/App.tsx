@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Home } from "./Pages/Home";
+import { Home } from "./pages/Home";
 import { MainLayout } from "./components/MainLayout";
-import { Login } from "./Pages/Login";
+import { Login } from "./pages/Login";
+import { Products } from "./pages/Products";
 
 function App() {
   return (
@@ -16,6 +17,14 @@ function App() {
           element={
             <Suspense fallback={<div>Cargando...</div>}>
               <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/products"
+          element={
+            <Suspense fallback={<div>Cargando...</div>}>
+              <Products />
             </Suspense>
           }
         />
