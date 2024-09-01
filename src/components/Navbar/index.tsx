@@ -1,8 +1,11 @@
 import { shallow } from "zustand/shallow";
 import { useNavbarStore } from "../../store/useNavbar.store";
+import { ToggleLanguageAndThemeButton } from "../ToggleLanguageAndThemeButton";
+import { useTheme } from "../../theme/ThemeProvider";
 
 export const Navbar = () => {
   const title = useNavbarStore((state) => state.title, shallow);
+  const { theme } = useTheme();
   return (
     <div
       style={{
@@ -11,11 +14,18 @@ export const Navbar = () => {
         boxSizing: "border-box",
         display: "flex",
         justifyContent: "space-between",
-
-        boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
+        alignItems: "center",
       }}
     >
-      <h1 style={{ color: "#000", fontWeight: "bold" }}>{title}</h1>
+      <h1
+        style={{
+          color: theme === "light" ? "#000" : "#fff",
+          fontWeight: "bold",
+        }}
+      >
+        {title}
+      </h1>
+      <ToggleLanguageAndThemeButton justifycontent="end" />
     </div>
   );
 };

@@ -31,10 +31,16 @@
     --chart-5: 27 87% 67%;
   }
 
+  @layer base {
+    * {
+      font-family: "REM", sans-serif;
+    }
+  }
+
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 9%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: 0 0% 11%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;

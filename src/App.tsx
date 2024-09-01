@@ -7,29 +7,31 @@ import { Products } from "./pages/Products";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
-      <Route path="/login" element={<Login />} />
-      <Route element={<MainLayout />}>
-        {/* Here it may be the next routes, inside mainlayout */}
-        <Route
-          path="/home"
-          element={
-            <Suspense fallback={<div>Cargando...</div>}>
-              <Home />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/products"
-          element={
-            <Suspense fallback={<div>Cargando...</div>}>
-              <Products />
-            </Suspense>
-          }
-        />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<MainLayout />}>
+          {/* Here it may be the next routes, inside mainlayout */}
+          <Route
+            path="/home"
+            element={
+              <Suspense fallback={<div>Cargando...</div>}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <Suspense fallback={<div>Cargando...</div>}>
+                <Products />
+              </Suspense>
+            }
+          />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

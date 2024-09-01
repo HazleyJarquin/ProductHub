@@ -39,8 +39,9 @@ export const LoginCard = ({ formik, t, isLoading }: Props) => {
           <CredentialsField t={t} formik={formik} formikField="password" />
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <CardFooter>
         <Button
+          style={{ width: "100%" }}
           onClick={() => formik.handleSubmit()}
           disabled={!formik.dirty || !formik.isValid || isLoading}
         >

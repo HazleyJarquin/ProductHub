@@ -1,1 +1,2 @@
-export * from "./ILoginRequest.interface";
+export * from "./ILoginRequest";
+export * from "./IProductsResponse";

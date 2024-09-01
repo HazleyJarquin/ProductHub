@@ -4,7 +4,14 @@ import { Navbar } from "../Navbar";
 
 export const MainLayout = () => {
   return (
-    <div style={{ display: "flex", height: "100vh", width: "100%" }}>
+    <div
+      style={{
+        // backgroundColor: theme === "dark" ? "#202124" : "#fff",
+        display: "flex",
+        height: "100vh",
+        width: "100%",
+      }}
+    >
       <Sidebar />
 
       <div
@@ -15,19 +22,6 @@ export const MainLayout = () => {
           overflow: "hidden",
         }}
       >
-        {/* <div
-          style={{
-            width: "100%",
-            padding: "12px 1.5rem",
-            position: "sticky",
-            top: 0,
-            background: "black",
-            zIndex: 3,
-            color: "white",
-          }}
-        >
-          navbar
-        </div> */}
         <Navbar />
 
         <div
